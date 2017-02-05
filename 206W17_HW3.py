@@ -68,7 +68,9 @@ for line in hand:
 
 hand=open('/Users/yangyang/Documents/UMICH/Python Course Stuff/GIT/HW3-P2/HW3/computer_paths.txt')
 microsoft_files_num=0
-
+for line in hand:
+    if re.search('.*[/].*[0-9][.][xlsdoc]', line) != None:
+        microsoft_files_num += 1
 
 
 ## We have provided unit tests in this file. To earn the full 500 points, you'll need to pass all of the tests and will need to have followed the instructions.
@@ -101,8 +103,8 @@ class Part2_HW3(unittest.TestCase):
         self.assertEqual(full_paths_num,16)
     def test_cpaths_3(self):
         self.assertEqual(python_course_paths,3)
-    #def test_cpaths_4(self):
-     #   self.assertEqual(microsoft_files_num,3)
+    def test_cpaths_4(self):
+        self.assertEqual(microsoft_files_num,3)
 
 
 if __name__ == "__main__":

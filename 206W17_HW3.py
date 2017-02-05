@@ -49,7 +49,7 @@ def file_paths_num(textfile):
     for line in hand:
         line=line.rstrip()
 
-print('ahaha')
+print('ahahano')
 
 ## (b) Write Python code to determine how many of these paths are FULL paths, not relative paths. Save that number in the variable full_paths_num.
 
